@@ -1,0 +1,61 @@
+.header {
+  text-align: center;
+}
+.searchDiv {
+  width: 55%;
+}
+.inputDiv {
+  width: 80%;
+  padding: 1%;
+  font-size: large;
+  border-radius: 12px;
+  border: 0.5px solid black;
+}
+.searchHandler {
+  background-color: rgb(247, 27, 63);
+  color: white;
+  padding: 10px 20px;
+  font-size: large;
+  border: none;
+  border-radius: 12px;
+  margin-left: 1%;
+  cursor: pointer;
+}
+.displayContent {
+  /* border: 1px solid black; */
+  width: 60%;
+}
+.rowDisplay {
+  display: flex;
+  justify-content: space-between;
+}
+.column1Display {
+  text-align: left;
+  /* border: 1px solid black; */
+  width: 40%;
+}
+.column2Display {
+  text-align: left;
+  /* border: 1px solid black; */
+  width: 40%;
+}
+.userImg {
+  width: 100%;
+  background-position: 40% 40%;
+  /* background-size: cover; */
+  border-radius: 50%;
+}
+.rowUserData {
+  display: flex;
+  justify-content: space-between;
+}
+.profileBtn {
+  background-color: black;
+  color: white;
+  font-size: large;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 7%;
+}
