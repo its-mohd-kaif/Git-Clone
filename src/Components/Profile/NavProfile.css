@@ -1,10 +1,21 @@
-.rowNavbar{
-    background-color: #24292f;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    padding-left: 7%;
-    padding-right: 7%;
-    padding-top: 2%;
-    font-size: larger;
+.rowNavbar {
+  background-color: #24292f;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 7%;
+  padding-right: 7%;
+  padding-top: 2%;
+  font-size: larger;
+}
+/* Media Query */
+@media screen and (max-width: 500px) {
+  .gridNavContainer {
+    display: grid;
+    grid-template-columns: auto;
+  }
+  .gridNav {
+    text-align: center;
+    margin: 2%;
+  }
 }

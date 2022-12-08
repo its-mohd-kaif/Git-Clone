@@ -4,6 +4,12 @@
 .searchDiv {
   width: 55%;
 }
+.hide {
+  display: none;
+}
+.seen {
+  display: block;
+}
 .inputDiv {
   width: 80%;
   padding: 1%;
@@ -12,7 +18,7 @@
   border: 0.5px solid black;
 }
 .searchHandler {
-  background-color: rgb(247, 27, 63);
+  background-color: #5d53e4;
   color: white;
   padding: 10px 20px;
   font-size: large;
@@ -22,8 +28,14 @@
   cursor: pointer;
 }
 .displayContent {
-  /* border: 1px solid black; */
+  border: 1px solid black;
   width: 60%;
+  margin-top: 3%;
+  padding: 2%;
+  border-radius: 12px;
+  background-color: #5d53e4;
+  border: none;
+  color: white;
 }
 .rowDisplay {
   display: flex;
@@ -31,18 +43,15 @@
 }
 .column1Display {
   text-align: left;
-  /* border: 1px solid black; */
   width: 40%;
 }
 .column2Display {
   text-align: left;
-  /* border: 1px solid black; */
   width: 40%;
 }
 .userImg {
   width: 100%;
   background-position: 40% 40%;
-  /* background-size: cover; */
   border-radius: 50%;
 }
 .rowUserData {

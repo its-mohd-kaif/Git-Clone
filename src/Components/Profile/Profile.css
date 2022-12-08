@@ -7,10 +7,8 @@
   width: 25%;
   text-align: left;
   margin-left: 3%;
-  /* border: 1px solid black; */
 }
 .column2Profile {
-  /* border: 1px solid black; */
   width: 70%;
 }
 .editProfileBtn {
@@ -18,42 +16,45 @@
   font-size: large;
   margin-left: 7%;
 }
-.rowLinkBtn{
-    display: flex;
-    justify-content: space-between;
+.rowLinkBtn {
+  display: flex;
+  justify-content: space-between;
 }
-.navLinkBtn{
-    font-size: larger;
-    border: none;
-    background: transparent;
-    font-weight: bolder;
-    cursor: pointer;
-    margin-top: 13%;
+.navLinkBtn {
+  font-size: larger;
+  border: none;
+  background: transparent;
+  font-weight: bolder;
+  cursor: pointer;
+  margin-top: 13%;
 }
-.navLinkBtn:hover{
-    border-bottom: 4px solid orangered;
+.navLinkBtn:hover {
+  border-bottom: 4px solid orangered;
 }
-.displayOverView{
-    /* width: 50%; */
-    /* border: 1px solid black; */
+.rowOver {
+  display: flex;
+  justify-content: space-between;
 }
-.rowOver{
-    display: flex;
-    /* border: 1px solid black; */
-    justify-content: space-between;
+.mainDivOverData {
+  width: 40%;
+  border: 1px solid rgb(158, 158, 158);
+  display: inline-block;
+  margin: 3%;
+  padding: 1%;
+  border-radius: 12px;
 }
-.mainDivOverData{
-    width: 40%;
-    border: 1px solid rgb(158, 158, 158);
-    display: inline-block;
-    margin: 3%;
-    padding: 1%;
-    border-radius: 12px;
+.visibilityDiv {
+  color: #5f6871;
+  background-color: white;
+  border-radius: 12px;
+  border: 1px solid #5f6871;
+  padding: 0.3em;
 }
-.visibilityDiv{
-    color: #5f6871;
-    background-color: white;
-    border-radius: 12px;
-    border: 1px solid #5f6871;
-    padding: 0.3em;
+
+/* Media Query */
+@media screen and (max-width: 992px) {
+  .gridContainer {
+    display: grid;
+    grid-template-columns: auto;
+  }
 }

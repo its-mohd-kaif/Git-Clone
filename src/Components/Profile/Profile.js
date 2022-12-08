@@ -1,31 +1,52 @@
 import React, { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchProfile } from "../../redux/usersSlice";
+import { fetchRepo } from "../../redux/usersSlice";
 import NavProfile from "./NavProfile";
 import "./Profile.css";
 
 function Profile() {
+  // Create State For Display Api content
   const [user, setUser] = useState([]);
+  // UseSelect for get Redux State Value
   const data = useSelector((state) => state.users);
   const profile = useSelector((state) => state.users.profile);
-
-  // setUser(profile)
-
-  // profile.length = 6;
+  // UseState For Set User Value Into Login
+  const [login, setLogin] = useState("");
+  // UseDispatch
+  const dispatch = useDispatch();
+  // Slice The Display Array Hold Into Temp 
+  let temp = profile.slice(0, 6);
 
   useEffect(() => {
-    let temp = []
-    temp = profile.slice(0, 6);
+    // Set Temp into Display State
     setUser(temp);
-  }, []);
-  console.log("USER OVERVIEW", user);
-  console.log("data pro", data.users);
+    // Set User Name Into Login
+    setLogin(data.users.login);
+  }, [data, profile]);
+
+  const repoFetchHandler = () => {
+    alert("Repositories Selected");
+    // Set Temp into Display State
+    setUser(temp);
+    // Dispatch FetchRepo Action
+    dispatch(fetchRepo(login));
+  };
+
+  const overviewHandler = () => {
+    alert("Overview Selected");
+    // Set Temp into Display State
+    setUser(temp);
+    // Dispatch FetchProfile Action
+    dispatch(fetchProfile(login));
+  };
 
   return (
     <div>
       <NavProfile />
       <div>
-        <div className="rowProfile">
-          <div className="column1Profile">
+        <div className="rowProfile gridContainer">
+          <div className="column1Profile gridItem">
             <div className="imgDiv">
               <img className="userImg" src={data.users.avatar_url} alt="" />
             </div>
@@ -42,28 +63,30 @@ function Profile() {
             </div>
           </div>
 
-          <div className="column2Profile">
+          <div className="column2Profile gridItem">
             <div className="rowLinkBtn">
               <div className="column1Linkbtn">
-                <button className="navLinkBtn">Overview</button>
+                <button onClick={overviewHandler} className="navLinkBtn">
+                  Overview
+                </button>
               </div>
               <div className="column2Linkbtn">
-                <button className="navLinkBtn">Repositories</button>
+                <button onClick={repoFetchHandler} className="navLinkBtn">
+                  Repositories
+                </button>
               </div>
               <div className="column3Linkbtn">
                 <button className="navLinkBtn">Project</button>
               </div>
             </div>
-            <div>
-              <p>Popular repositories </p>
-            </div>
             <div className="displayOverView">
-              {user.map((val) => (
-                <div className="mainDivOverData">
+              {/* Display Content */}
+              {user.map((val, index) => (
+                <div key={index} className="mainDivOverData">
                   <div className="rowOver">
                     <div className="column1Over">
                       <div>
-                        <h4 style={{color:"#2a7ddf"}}>{val.name}</h4>
+                        <h4 style={{ color: "#2a7ddf" }}>{val.name}</h4>
                       </div>
                       <div>
                         <p>{val.language}</p>
