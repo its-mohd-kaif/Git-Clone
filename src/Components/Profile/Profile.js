@@ -8,15 +8,19 @@ import "./Profile.css";
 function Profile() {
   // Create State For Display Api content
   const [user, setUser] = useState([]);
+  const [hide, setHide] = useState("seen");
   // UseSelect for get Redux State Value
   const data = useSelector((state) => state.users);
   const profile = useSelector((state) => state.users.profile);
+
   // UseState For Set User Value Into Login
   const [login, setLogin] = useState("");
   // UseDispatch
   const dispatch = useDispatch();
-  // Slice The Display Array Hold Into Temp 
-  let temp = profile.slice(0, 6);
+  // Slice The Display Array Hold Into Temp
+  let temp = profile.slice(0, 8);
+
+  console.log("DATA", data.users);
 
   useEffect(() => {
     // Set Temp into Display State
@@ -26,17 +30,17 @@ function Profile() {
   }, [data, profile]);
 
   const repoFetchHandler = () => {
-    alert("Repositories Selected");
     // Set Temp into Display State
     setUser(temp);
+    setHide("hide");
     // Dispatch FetchRepo Action
     dispatch(fetchRepo(login));
   };
 
   const overviewHandler = () => {
-    alert("Overview Selected");
     // Set Temp into Display State
     setUser(temp);
+    setHide("seen");
     // Dispatch FetchProfile Action
     dispatch(fetchProfile(login));
   };
@@ -72,11 +76,24 @@ function Profile() {
               </div>
               <div className="column2Linkbtn">
                 <button onClick={repoFetchHandler} className="navLinkBtn">
-                  Repositories
+                  Repositories {data.users.repos_url.length}
                 </button>
               </div>
               <div className="column3Linkbtn">
                 <button className="navLinkBtn">Project</button>
+              </div>
+            </div>
+            <div className={hide}>
+              <div className="userBioDiv">
+                <div>
+                  <span style={{ fontWeight: "bold" }}>Bio </span>
+                  {data.users.bio}
+                </div>
+                <hr></hr>
+                <div>
+                  <span style={{ fontWeight: "bold" }}>Location </span>
+                  {data.users.location}
+                </div>
               </div>
             </div>
             <div className="displayOverView">

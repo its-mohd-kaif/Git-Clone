@@ -1,15 +1,19 @@
 .header {
   text-align: center;
 }
+
 .searchDiv {
   width: 55%;
 }
+
 .hide {
   display: none;
 }
+
 .seen {
   display: block;
 }
+
 .inputDiv {
   width: 80%;
   padding: 1%;
@@ -17,6 +21,7 @@
   border-radius: 12px;
   border: 0.5px solid black;
 }
+
 .searchHandler {
   background-color: #5d53e4;
   color: white;
@@ -27,6 +32,7 @@
   margin-left: 1%;
   cursor: pointer;
 }
+
 .displayContent {
   border: 1px solid black;
   width: 60%;
@@ -37,27 +43,33 @@
   border: none;
   color: white;
 }
+
 .rowDisplay {
   display: flex;
   justify-content: space-between;
 }
+
 .column1Display {
   text-align: left;
   width: 40%;
 }
+
 .column2Display {
   text-align: left;
   width: 40%;
 }
+
 .userImg {
   width: 100%;
   background-position: 40% 40%;
   border-radius: 50%;
 }
+
 .rowUserData {
   display: flex;
   justify-content: space-between;
 }
+
 .profileBtn {
   background-color: black;
   color: white;

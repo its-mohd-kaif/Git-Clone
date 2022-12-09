@@ -3,23 +3,28 @@
   display: flex;
   justify-content: space-between;
 }
+
 .column1Profile {
   width: 25%;
   text-align: left;
   margin-left: 3%;
 }
+
 .column2Profile {
   width: 70%;
 }
+
 .editProfileBtn {
   padding: 3px 75px;
   font-size: large;
   margin-left: 7%;
 }
+
 .rowLinkBtn {
   display: flex;
   justify-content: space-between;
 }
+
 .navLinkBtn {
   font-size: larger;
   border: none;
@@ -28,13 +33,16 @@
   cursor: pointer;
   margin-top: 13%;
 }
+
 .navLinkBtn:hover {
   border-bottom: 4px solid orangered;
 }
+
 .rowOver {
   display: flex;
   justify-content: space-between;
 }
+
 .mainDivOverData {
   width: 40%;
   border: 1px solid rgb(158, 158, 158);
@@ -43,12 +51,31 @@
   padding: 1%;
   border-radius: 12px;
 }
+
 .visibilityDiv {
   color: #5f6871;
   background-color: white;
   border-radius: 12px;
   border: 1px solid #5f6871;
   padding: 0.3em;
+}
+
+.userBioDiv{
+  width: 60%;
+  text-align: center;
+  border: 1px solid rgb(161, 161, 161);
+  margin-left: 22%;
+  margin-top: 3%;
+  padding: 3%;
+  border-radius: 12px;
+}
+
+.seen{
+  display: block;
+}
+
+.hide{
+  display: none;
 }
 
 /* Media Query */

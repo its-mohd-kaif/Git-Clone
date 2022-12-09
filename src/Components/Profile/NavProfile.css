@@ -8,12 +8,15 @@
   padding-top: 2%;
   font-size: larger;
 }
+
 /* Media Query */
 @media screen and (max-width: 500px) {
+  
   .gridNavContainer {
     display: grid;
     grid-template-columns: auto;
   }
+
   .gridNav {
     text-align: center;
     margin: 2%;
